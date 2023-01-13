@@ -6,10 +6,9 @@ galleryEl.addEventListener('click', openModal);
 
 function openModal(event) {
   event.preventDefault();
-  // event.target
   console.log(event.target.dataset.source);
-  // event.target.dataset -об'єкт з дата атрибутами
-  let lightbox = new SimpleLightbox('.gallery a', {showCounter: false });
+  // event.target.dataset - об'єкт з дата атрибутами
+  let lightbox = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250});
 }
 
 const markup = galleryItems.map((element) => 

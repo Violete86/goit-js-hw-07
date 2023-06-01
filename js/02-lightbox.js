@@ -21,10 +21,11 @@ galleryEl.addEventListener('click', (event) => {
   event.preventDefault();
 
   let lightbox = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250});
-
   
 });
 
 const galleryMarkup = galleryEl.insertAdjacentHTML('beforeend', markup);
 
 
+
+  

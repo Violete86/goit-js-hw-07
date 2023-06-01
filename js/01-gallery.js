@@ -7,11 +7,18 @@ galleryEl.addEventListener('click', openModal);
 function openModal(event) {
   event.preventDefault();
   // event.target
-  console.log(event.target.dataset.source);
-  basicLightbox.create(`
-		<img width="1400" height="900" src="${event.target.dataset.source}">
-	`).show()
-  // event.target.dataset -об'єкт з дата атрибутами
+
+  
+if (event.target.classList.contains('gallery__image')) {
+    
+    const imageSource = event.target.dataset.source;
+    
+    basicLightbox.create(`
+       <img width="1400" height="900" src="${event.target.dataset.source}">
+     `).show();
+
+  }
+  
 }
 
 const markup = galleryItems.map((element) => 
